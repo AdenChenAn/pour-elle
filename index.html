@@ -3,14 +3,31 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title></title>
+	<style>
+		main_text {
+			color:#000000;
+			margin:20%;
+			text-align:center;
+			font-size:270%;
+			font-family:Cursive, Serif;
+		}
+	</style>
 </head>
-<body>
+<body bgcolor="#FFF5FA">
+	<main_text>
+		<p>现在呀 已经第
+			<span color:"#000" id="days"></span>
+			天了呢
+		</p>
+		<!-- <p>You are the sweetest girl that I know.</p> -->
+	</main_text>
+	
 	<script content="text/js">
 		var date = new Date().getTime();
 		var start_date = new Date("2018/01/07 00:00:00").getTime();
 		date -= start_date;
 		date = new Date(date);
-		alert(Math.floor(date.getTime()/3600/24/1000));
+		document.getElementById("days").innerHTML = String(Math.floor(date.getTime()/3600/24/1000));
 	</script>
 </body>
 </html>
