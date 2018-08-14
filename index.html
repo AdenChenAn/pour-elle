@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>test</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title></title>
 </head>
 <body>
-	<h1>Hello World!</h1>
+	<script content="text/js">
+		var date = new Date().getTime();
+		var start_date = new Date("2018/01/07 00:00:00").getTime();
+		date -= start_date;
+		date = new Date(date);
+		alert(Math.floor(date.getTime()/3600/24/1000));
+	</script>
 </body>
 </html>
